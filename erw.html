@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <h2>Formulario de Contacto</h2>
+    <form method="post" action="ex1.php">
+
+        <!-- Nombre -->
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <!-- Apellido -->
+        <label for="cognom">Cognom:</label>
+        <input type="text" id="cognom" name="cognom" required><br><br>
+
+        <!-- Edad (Número) -->
+        <label for="edad">Edat:</label>
+        <input type="number" id="edad" name="edad" min="0" max="120" required><br><br>
+
+        <!-- Género (Radio Button) -->
+        <label>Gènere:</label><br>
+        <input type="radio" id="masculi" name="genero" value="masculi" required>
+        <label for="masculi">Masculí</label>
+        <input type="radio" id="femeni" name="genero" value="femeni" required>
+        <label for="femeni">Femení</label>
+        <input type="radio" id="altre" name="genero" value="altre" required>
+        <label for="altre">Altres</label><br><br>
+
+        <!-- Correo Electrónico -->
+        <label for="email">Correu Electrònic:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Ciudad (Lista desplegable con Datalist) -->
+        <label for="ciutat">Ciutat:</label>
+        <input list="ciutats" id="ciutat" name="ciutat" required>
+        <datalist id="ciutats">
+            <option value="Barcelona">
+            <option value="Madrid">
+            <option value="Valencia">
+            <option value="Sevilla">
+            <option value="Bilbao">
+        </datalist>
+        <br><br>
+
+        <!-- Aficiones (Checkbox) -->
+        <label>Llista d'aficions:</label><br>
+        <input type="checkbox" id="lectura" name="aficions[]" value="lectura">
+        <label for="lectura">Lectura</label>
+        <input type="checkbox" id="esports" name="aficions[]" value="esports">
+        <label for="esports">Esports</label>
+        <input type="checkbox" id="musica" name="aficions[]" value="musica">
+        <label for="musica">Música</label>
+        <input type="checkbox" id="viatges" name="aficions[]" value="viatges">
+        <label for="viatges">Viatges</label><br><br>
+
+        <!-- Motivación (Textarea) -->
+        <label for="motivacio">Espai per recollir les motivacions personals:</label><br>
+        <textarea id="motivacio" name="motivacio" rows="4" cols="30" required></textarea><br><br>
+
+        <!-- Botón de Envío -->
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
